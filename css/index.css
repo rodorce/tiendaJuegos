@@ -70,4 +70,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* xd */
+.card {
+    height: 100%;
+}
