@@ -47,3 +47,8 @@
     width: max-content;
     float: right;
 }
+
+.imageContainer {
+    height: 300px;
+    float:left;
+}
