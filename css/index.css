@@ -55,3 +55,17 @@ body {
 .categories-item {
     padding-top:8px;
 }
+
+.registerForm {
+    text-align: left;
+}
+
+.registerContainer {
+    width: 30vw !important;
+}
+
+.registerInput {
+    width: 100%;
+    height: 2em;
+    margin-bottom: 15px;
+}
