@@ -18,15 +18,15 @@
                   <div class="media-content">
                       <h2 class="title" style="text-align: center;">Registro</h2>
                     <h3>Email</h3>
-                    <input type="text" class="registerInput">
+                    <input type="email" id="email" class="registerInput">
                     <h3>Password</h3>
-                    <input type="text" class="registerInput">
+                    <input type="password" id="password" class="registerInput">
                     <div class="columns">
                       <div class="column">
                         <a href="./login.html" class="button is-danger" style="margin: 0; width: 100%;">Cancelar</a>
                       </div>
                       <div class="column">
-                        <a class="button is-success" style="margin: 0; width: 100%;">Registrar</a>
+                        <a class="button is-success" id="registrarUsuario" style="margin: 0; width: 100%;">Registrar</a>
                       </div>
                       </div>
                   </div>
@@ -37,29 +37,35 @@
             </div>
         </div>
     </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyA0oKp6tZsVGlGQXl5xgANI1OtFqFpTaB8",
+        authDomain: "tiendajuegos-92ebb.firebaseapp.com",
+        databaseURL: "https://tiendajuegos-92ebb.firebaseio.com",
+        projectId: "tiendajuegos-92ebb",
+        storageBucket: "tiendajuegos-92ebb.appspot.com",
+        messagingSenderId: "650282965544",
+        appId: "1:650282965544:web:f12c701367378641f9b31d",
+        measurementId: "G-HHEF7C6ZTH"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="./js/signup.js"></script>
 </body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyA0oKp6tZsVGlGQXl5xgANI1OtFqFpTaB8",
-    authDomain: "tiendajuegos-92ebb.firebaseapp.com",
-    databaseURL: "https://tiendajuegos-92ebb.firebaseio.com",
-    projectId: "tiendajuegos-92ebb",
-    storageBucket: "tiendajuegos-92ebb.appspot.com",
-    messagingSenderId: "650282965544",
-    appId: "1:650282965544:web:f12c701367378641f9b31d",
-    measurementId: "G-HHEF7C6ZTH"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 </html>
