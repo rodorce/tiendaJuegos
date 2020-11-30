@@ -112,8 +112,8 @@
 
           <div class="products-list">
             <!-- <div class="row"> -->
-              <div class="productsColumns columns is-multiline is-mobile">
-                <div class="column is-one-fourth">
+              <div class="categoriesContainer">
+                
                   <p style="font-weight: bold;">Productos</p>
                   <br>
                   <div class="categories" style="font-size:0.8em">
@@ -129,14 +129,17 @@
                     
                       <p style="font-weight: bold; padding-bottom:12px;">Generos</p>
                       <ul class="categories-list">
+                        <li class="categories-item">Todos</li>
                         <li class="categories-item">Acción</li>
                         <li class="categories-item">RPG</li>
-                        <li class="categories-item">FPS</li>
                         <li class="categories-item">Aventuras</li>
                       </ul>
                 </div>
                 </div>
-              </div>
+
+                <div class="columns productsColumns is-multiline is-mobile">
+                </div>
+              
             
           <!-- </div> -->
       </div>
@@ -166,6 +169,10 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+      </script>
+      <script>
+        fetchData()
+        fetchCategories()
       </script>
 </body>
 </html>
