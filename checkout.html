@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <title>Checkout</title>
+</head>
+<body>
+    <section class="hero is-medium"
+    style="background-image: url('./images/carrito.jpg'); background-position: center; background-repeat: no-repeat;background-size:cover;">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+  
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+  
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <a class="navbar-item">
+            Juegos de PC
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de XBOX
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de PlayStation
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de Switch
+          </a>
+  
+  
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <img src="./assets/icons/shopping_cart_light.svg" style="padding-right: 2em;">
+            <img src="./assets/icons/account.svg" style="padding-right: 2em;" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-body" style="z-index: 2; background-color: rgba(36, 36, 36, 0.713)">
+      <div class="container has-text-centered">
+        <h3 class="title" style="color:white">Checkout</h3>
+        <h2 class="subtitle" style="color:white; font-family: 'Roboto', sans-serif;">
+          Llena la información de pago para finalizar la compra de tus juegos.
+        </h2>
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container featuredContainer">
+      <h3 class="title">Resumen de la orden</h3>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+            <h3 class="juego">
+                Cyberpunk 2077
+            </h3>
+        </div>
+        <div class="column is-half">
+          <h3 class="precio">$60</h3>
+        </div>
+        <div class="column is-half">
+          <h3 class="juego">
+              Red Dead Redemption 2
+          </h3>
+        </div>
+        <div class="column is-half">
+          <h3 class="precio">$60</h3>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container featuredContainer">
+        <div class="paymentContainer">
+      <h3 class="title">Información de pago</h3>
+      <h3 class="paymentInfo">Nombre</h3>
+      <input type="text" name="" id="">
+      <h3 class="paymentInfo">Apellidos</h3>
+      <input type="text" name="" id="">
+      <h3 class="paymentInfo">Numero de tarjeta</h3>
+      <input type="text" name="" id="">
+      <h3 class="paymentInfo">Expiración</h3>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+            <label class="paymentInfo" for="mes">Selecciona un mes:</label>
+            <br>
+              <select name="mes" id="mes">
+                  <option value="volvo">Enero</option>
+                  <option value="saab">Febrero</option>
+                  <option value="opel">Marzo</option>
+                  <option value="audi">Abril</option>
+                  <option value="audi">Mayo</option>
+                  <option value="audi">Junio</option>
+                  <option value="audi">Julio</option>
+                  <option value="audi">Agosto</option>
+                  <option value="audi">Septiembre</option>
+                  <option value="audi">Octubre</option>
+                  <option value="audi">Noviembre</option>
+                  <option value="audi">Diciembre</option>
+              </select>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="paymentInfo">Selecciona un año</h3>
+          <input type="number" name="" id="">
+        </div>
+        <div class="column is-one-third">
+          <h3 class="paymentInfo">CVV</h3>
+          <input type="number" name="" id="">
+        </div>
+      </div>
+        </div>
+    </div>
+    <a class="btnCheckout button is-success is-outlined">Proceder al pago</a>
+</section>
+
+    
+</body>
+</html>

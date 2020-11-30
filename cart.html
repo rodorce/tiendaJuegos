@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de videojuegos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/cart.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="hero is-medium"
+    style="background-image: url('./images/carrito.jpg'); background-position: center; background-repeat: no-repeat;background-size:cover;">
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+  
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+  
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <a class="navbar-item">
+            Juegos de PC
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de XBOX
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de PlayStation
+          </a>
+  
+          <a class="navbar-item">
+            Juegos de Switch
+          </a>
+  
+  
+        </div>
+  
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <img src="./assets/icons/shopping_cart_light.svg" style="padding-right: 2em;">
+            <img src="./assets/icons/account.svg" style="padding-right: 2em;" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-body" style="z-index: 2; background-color: rgba(36, 36, 36, 0.713)">
+      <div class="container has-text-centered">
+        <h3 class="title" style="color:white">Carrito</h3>
+        <h2 class="subtitle" style="color:white; font-family: 'Roboto', sans-serif;">
+          Aquí podrás acceder a todos los productos a comprar.
+        </h2>
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="horizontalCard">
+        <img src="./images/cyberpunk.jpg" alt="imgProd" class="imgProd">
+        <h3 class="title titleCart">
+          Cyberpunk 2077
+        </h3>
+        <img src="./assets/icons/delete.svg" alt="" class="remove">
+        <h6 class="descProd">
+          Cyberpunk 2077 es una historia de acción y aventuras en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamur y la modificación corporal. Te pondrás en la piel de V, un mercenario que persigue un implante único: el secreto de la inmortalidad.
+        </h6>
+        <h3 class="cantidad">
+          Cantidad
+        </h3>
+        <input type="number" name="cantidad" id="cantidad">
+      </div>
+      
+      
+      <a class="btnCheckout button is-success is-outlined">Proceder al pago</a>
+      
+      
+
+    </div>
+  </section>
+</body>
+
+</html>

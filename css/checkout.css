@@ -1,0 +1,60 @@
+.horizontalCard {
+    height: auto;
+    max-width: 1300px !important;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding: 3em 1em 3em 1em !important;
+    overflow:auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.featuredContainer {
+    width: 40vw !important;
+}
+
+.paymentContainer {
+    width: 600px;
+}
+
+.titleCart {
+    display:inline !important;
+}
+
+.descProd {
+    margin: 0 auto;
+}
+
+.remove {
+    float: right;
+}
+
+.cantidad {
+    padding-top: 3em;
+}
+
+#cantidad {
+    width: 80px;
+    height: 30px;
+    font-size:20px;
+    text-align: center;
+}
+
+.btnCheckout {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    width: max-content;
+    margin-top:30px;
+    margin-bottom: 30px;
+    margin-right: 30vw;
+}
+
+.paymentInfo {
+    font-weight: bold;
+}
+
+.precio {
+    text-align: right;
+}

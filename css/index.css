@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arimo', sans-serif;
+}
+
+.navbar{
+    font-weight: 500;
+    background-color: rgba(36, 36, 36, 0.713) !important;
+
+}
+
+.navbar-item {
+    color: white !important;
+    font-size: 1.05em;
+}
+
+.navbar-item:hover {
+    color: rgba(202, 68, 68, 0.885) !important;
+}
+
+.is-desktop {
+    font-size: 10em;
+}
+.comprarBtn{
+    font-size: 1em;
+    font-weight: bold;
+    padding-right:1em;
+    border-radius: 3px !important;
+}
+
+.comprarBtn_container{
+    padding-right: 2em;
+}
+
+.comprarBtn:hover{
+    background-color: black !important;
+    color: white !important;
+}
+
+.featuredStn {
+    background-color: rgb(248, 248, 248);
+}
+
+.featuredContainer {
+    max-width: 1700px !important;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    padding: 3em 1em 3em 1em !important;
+}
+
+.frase2 {
+    font-size: 4em;
+}
+
+.categories-item {
+    padding-top:8px;
+}
