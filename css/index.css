@@ -52,7 +52,7 @@ body {
     font-size: 4em;
 }
 
-.categories-item {
+.categories-item, .platform-item{
     padding-top:8px;
 }
 
@@ -72,6 +72,7 @@ body {
 
 .card {
     height: 100%;
+    max-width: 100% !important;
 }
 
 .categoriesContainer {

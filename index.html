@@ -49,8 +49,10 @@
         
             <div class="navbar-end">
               <div class="navbar-item">
+                <a id="cartIcon" href="">
                   <img src="./assets/icons/shopping_cart_light.svg" style="padding-right: 2em;">
-                  <a href="./login.html">
+                </a>  
+                  <a id="userIcon" href="./login.html">
                     <img src="./assets/icons/account.svg" style="padding-right: 2em;"/>
                   </a>
               </div>
@@ -62,7 +64,7 @@
             <h1 class="title is-desktop">
               Juega<br> Ahora
             </h1>
-            <a class="button is-white comprarBtn">
+            <a href="#todosJuegos" class="button is-white comprarBtn">
               <h1 class="comprarBtn_container">Comprar juegos al mejor precio</h1> <img src="./assets/icons/flecha_hero.svg" style="width:12px;height:12px;" alt=""></a>
           </div>
         </div>
@@ -102,7 +104,7 @@
         </div>
       </section>
 
-      <section class="section is-fullhd">
+      <section id="todosJuegos" class="section is-fullhd">
         <div class="container" style="max-width:1700px">
           <h1 class="title">Juegos</h1>
           <h3 class="subtitle is-6" style="padding-top:1.5em">
@@ -119,10 +121,11 @@
                   <div class="categories" style="font-size:0.8em">
                     <p style="font-weight: bold; padding-bottom:12px;">Plataformas</p>
                     <ul class="categories-list">
-                      <li class="categories-item">PC</li>
-                      <li class="categories-item">XBOX</li>
-                      <li class="categories-item">PlayStation</li>
-                      <li class="categories-item">Switch</li>
+                      <li class="platform-item">Todos</li>
+                      <li class="platform-item">PC</li>
+                      <li class="platform-item">XBOX</li>
+                      <li class="platform-item">PlayStation</li>
+                      <li class="platform-item">Switch</li>
                     </ul>
                     <br>
                     <br>
@@ -133,6 +136,7 @@
                         <li class="categories-item">Acción</li>
                         <li class="categories-item">RPG</li>
                         <li class="categories-item">Aventuras</li>
+                        <li class="categories-item">FPS</li>
                       </ul>
                 </div>
                 </div>
@@ -144,14 +148,14 @@
           <!-- </div> -->
       </div>
       </section>
-
-      <script src="./js/index.js"></script>
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
       
       <!-- TODO: Add SDKs for Firebase products that you want to use
            https://firebase.google.com/docs/web/setup#available-libraries -->
-      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+           <script defer src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
       
       <script>
         // Your web app's Firebase configuration
@@ -170,9 +174,12 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
       </script>
+      <script src="./js/index.js"></script>
+      <script defer src="./js/firebaseAuth.js"></script>
       <script>
         fetchData()
         fetchCategories()
+        fetchPlatform()
       </script>
 </body>
 </html>
