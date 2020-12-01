@@ -3,18 +3,19 @@
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       //Usuario con sesion iniciada
-      let cart = document.querySelector('#cartIcon')
+      let cartIcon = document.querySelector('#cartIcon')
       let userIcon = document.querySelector('#userIcon')
       let btnCheckout = document.querySelector('.btnCheckout')
       let btnPay = document.querySelector('.btnPay')
+      cartIcon.href = '../cart.html'
+      btnPay.href = '../inventory.html'
+      userIcon.href="../inventory.html"
+      btnCheckout.href = '../checkout.html'
       addToCart(user);
       showCart(user.uid);
       checkOut(user.uid)
       giveKeys(user.uid)
-      cartIcon.href = '../cart.html'
-      btnPay.href = '../inventory.html'
-      userIcon.href=""
-      btnCheckout.href = '../checkout.html'
+    
       userIcon.innerText = "Cerrar sesion"
       userIcon.style.color = "white"
       userIcon.addEventListener('click' , () => {
