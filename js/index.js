@@ -61,7 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
                   <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                  <span>$</span>
+                  <span>${price}</span>
+                  </p>
                   </div>
               </div>
             </div>
