@@ -9,34 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
-    
-    <section class="section">
-        <div class="container registerContainer">
-            <div class="card">
-              <div class="card-content">
-                <div class="media registerForm">
-                  <div class="media-content">
-                      <h2 class="title" style="text-align: center;">Registro</h2>
-                    <h3>Email</h3>
-                    <input type="email" id="email" class="registerInput">
-                    <h3>Password</h3>
-                    <input type="password" id="password" class="registerInput">
-                    <div class="columns">
-                      <div class="column">
-                        <a href="./login.html" class="button is-danger" style="margin: 0; width: 100%;">Cancelar</a>
-                      </div>
-                      <div class="column">
-                        <a class="button is-success" id="registrarUsuario" style="margin: 0; width: 100%;">Registrar</a>
-                      </div>
-                      </div>
-                  </div>
-
+     <div class="hero is-fullheight is-primary">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-8 is-offset-2">
+          <h2 class="title" style="text-align: center;">Registro</h2>
+              <hr class="login-hr">
+              <h3>Correo</h3>
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-large" id="email" type="email" placeholder="example@gmail.com" autofocus="">
                   </div>
                 </div>
-              </div>
-            </div>
+                <div class="field">
+                  <div class="control">
+                    <h3>Contraseña</h3>
+                    <input class="input is-large" id="password" type="password" placeholder="Contraseña">
+                  </div>
+                </div>
+              </form>
+              <div class="column is-8 is-offset-2">
+                <div class="columns is-mobile">
+                  <div class="column">
+                    <a href="./login.html" class="button is-danger" style="margin: 0; width: 100%;">Cancelar</a>
+                  </div>
+                  <div class="column">
+                    <a href="./index.html" class="button is-success" id="registrarUsuario" style="margin: 0; width: 100%;">Registrar</a>
+                  </div>
+                </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     

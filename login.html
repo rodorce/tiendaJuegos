@@ -10,34 +10,34 @@
 </head>
 <body>
     
-    <section class="section">
-        <div class="container registerContainer">
-            <div class="card">
-              <div class="card-content">
-                <div class="media registerForm">
-                  <div class="media-content">
-                      <h2 class="title" style="text-align: center;">Iniciar sesión</h2>
-                    <h3>Email</h3>
-                    <input type="email" id="email" class="registerInput">
-                    <h3>Password</h3>
-                    <input type="password" id="password" class="registerInput">
-                    <h3 style="text-align: center; margin-bottom:1em; margin-top:1em;">¿No tienes una cuenta? <a href="./signup.html">¡Registrate!</a></h3>
-                    <div class="columns">
-                      <div class="column">
-                        <a href="./index.html" class="button is-danger" style="margin: 0; width: 100%;">Cancelar</a>
-                      </div>
-                      <div class="column">
-                        <a id="iniciarSesion" class="button is-success" style="margin: 0; width: 100%;">Iniciar sesión </a>
-                      </div>
-                      </div>
-                  </div>
-
+    <div class="hero is-fullheight is-primary">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-8 is-offset-2">
+          <h3 class="title has-text-white">Login</h3>
+              <hr class="login-hr">
+              <p class="subtitle has-text-white">Por favor ingresa tu correo y contraseña</p>
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-large" id="email" type="email" placeholder="example@gmail.com" autofocus="">
                   </div>
                 </div>
-              </div>
-            </div>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-large" id="password" type="password" placeholder="Contraseña">
+                  </div>
+                </div>
+              </form>
+              <div class="column is-8 is-offset-2">
+                </div>
+              <a href="./index.html" class="button is-block is-link is-large is-fullwidth ">Login </a>
+              <h3 style="text-align: center; margin-bottom:1em; margin-top:1em;">¿No tienes una cuenta? <a href="./signup.html">¡Registrate!</a></h3>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
     
