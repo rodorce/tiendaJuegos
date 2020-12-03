@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let desc = data[i].desc;
       let imgUrl = data[i].imgUrl;
       let newCard = `
-      <div class="column  is-multiline">
+      <div class="column is-one-quarter-desktop">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -58,47 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="content is-hidden-mobile">
-          <p>${desc}</p>
-        </div>
-        <br>
-        <br>
-        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
-      </div>
-    </div>
-    </div>`
-    productsColumn.innerHTML = productsColumn.innerHTML + newCard;
-    
-    if(data[i].featured) {
-      let featuredItem = `<div class="column ">
-      <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="${imgUrl}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          
-          <div class="media-content">
-            <p class="title is-4 is-size-4-mobile">${name}</p>
-            <div class="row">
-              <div class="columns">
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
-                </div>
-                <div class="column">
-                  <p class="subtitle is-6  is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                  <span>$</span>
+                  <span>${price}</span>
+                  </p>
                   </div>
               </div>
             </div>
@@ -107,10 +73,50 @@ document.addEventListener('DOMContentLoaded', () => {
     
         <div class="content">
           <p>${desc}</p>
+          <br>
+          <br>
+          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
-        <br>
-        <br>
-        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+      </div>
+    </div>
+    </div>`
+    productsColumn.innerHTML = productsColumn.innerHTML + newCard;
+    
+    if(data[i].featured) {
+      let featuredItem = `<div class="column">
+      <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="${imgUrl}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          
+          <div class="media-content">
+            <p class="title is-4">${name}</p>
+            <div class="row">
+              <div class="columns">
+                <div class="column">
+                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                </div>
+                <div class="column">
+                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                  <span>$</span>
+                  <span>${price}</span>
+                  </p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="content">
+          <p>${desc}</p>
+          <br>
+          <br>
+          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+        </div>
       </div>
     </div>
     </div>`
@@ -144,41 +150,43 @@ function fetchCategories() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-multiline">
-      <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="${imgUrl}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          
-          <div class="media-content">
-            <p class="title is-4  is-size-4-mobile ">${name}</p>
-            <div class="row">
-              <div class="columns">
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
-                </div>
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+        <div class="column is-one-quarter">
+        <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="${imgUrl}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            
+            <div class="media-content">
+              <p class="title is-4">${name}</p>
+              <div class="row">
+                <div class="columns">
+                  <div class="column">
+                    <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                   </div>
+                  <div class="column">
+                    <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                    <span>$</span>
+                    <span>${price}</span>
+                    </p>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="content">
+            <p>${desc}</p>
+            <br>
+            <br>
+            <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+          </div>
         </div>
-    
-        <div class="content is-hidden-mobile">
-          <p>${desc}</p>
-        </div>
-        <br>
-        <br>
-        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
-        
       </div>
-    </div>
-    </div>`
+      </div>`
         productsColumn.innerHTML = productsColumn.innerHTML + newCard;
         let card = document.querySelectorAll('.card')
       } else if (item.textContent == 'Todos') {
@@ -190,40 +198,43 @@ function fetchCategories() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-multiline">
-      <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="${imgUrl}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          
-          <div class="media-content">
-            <p class="title is-4 is-size-4-mobile">${name}</p>
-            <div class="row">
-              <div class="columns">
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
-                </div>
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+        <div class="column is-one-quarter-desktop">
+        <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="${imgUrl}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            
+            <div class="media-content">
+              <p class="title is-4">${name}</p>
+              <div class="row">
+                <div class="columns">
+                  <div class="column">
+                    <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                   </div>
+                  <div class="column">
+                    <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                    <span>$</span>
+                    <span>${price}</span>
+                    </p>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="content">
+            <p>${desc}</p>
+            <br>
+            <br>
+            <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+          </div>
         </div>
-    
-        <div class="content is-hidden-mobile">
-          <p>${desc}</p>
-        </div>
-        <br>
-        <br>
-        <a class="button  btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
-        </div>
-    </div>
-    </div>`
+      </div>
+      </div>`
         productsColumn.innerHTML = productsColumn.innerHTML + newCard;
         }
       }
@@ -256,40 +267,43 @@ function fetchPlatform() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-multiline">
-      <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="${imgUrl}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          
-          <div class="media-content">
-            <p class="title is-4 is-size-4-mobile">${name}</p>
-            <div class="row">
-              <div class="columns">
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
-                </div>
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+        <div class="column is-one-quarter-desktop">
+        <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="${imgUrl}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            
+            <div class="media-content">
+              <p class="title is-4">${name}</p>
+              <div class="row">
+                <div class="columns">
+                  <div class="column">
+                    <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                   </div>
+                  <div class="column">
+                    <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
+                    <span>$</span>
+                    <span>${price}</span>
+                    </p>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="content">
+            <p>${desc}</p>
+            <br>
+            <br>
+            <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+          </div>
         </div>
-    
-        <div class="content is-hidden-mobile">
-          <p>${desc}</p>
-        </div>
-        <br>
-          <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
       </div>
-    </div>
-    </div>`
+      </div>`
         productsColumn.innerHTML = productsColumn.innerHTML + newCard;
       } else if (item.textContent == 'Todos') {
         productsColumn.innerHTML = ""
@@ -300,40 +314,43 @@ function fetchPlatform() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-multiline">
-      <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="${imgUrl}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          
-          <div class="media-content">
-            <p class="title is-4 is-size-4-mobile">${name}</p>
-            <div class="row">
-              <div class="columns">
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
-                </div>
-                <div class="column">
-                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
+        <div class="column is-one-quarter-desktop">
+        <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="${imgUrl}" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            
+            <div class="media-content">
+              <p class="title is-4">${name}</p>
+              <div class="row">
+                <div class="columns">
+                  <div class="column is-mobile">
+                    <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
                   </div>
+                  <div class="column">
+                    <p class="subtitle is-6 has-text-right is-size-3-mobile" style="padding-right:2em; font-weight: bold;">
+                    <span>$</span>
+                    <span>${price}</span>
+                    </p>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
+      
+          <div class="content">
+            <p>${desc}</p>
+            <br>
+            <br>
+            <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+          </div>
         </div>
-    
-        <div class="content is-hidden-mobile">
-          <p>${desc}</p>
-        </div>
-        <br>
-        <br>
-        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego();><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
       </div>
-    </div>
-    </div>`
+      </div>`
         productsColumn.innerHTML = productsColumn.innerHTML + newCard;
         }
       }
