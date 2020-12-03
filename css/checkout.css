@@ -14,9 +14,6 @@
     width: 40vw !important;
 }
 
-.paymentContainer {
-    width: 600px;
-}
 
 .titleCart {
     display:inline !important;
@@ -41,7 +38,7 @@
     text-align: center;
 }
 
-.btnCheckout {
+#btnCheckout {
     float: right;
     display: flex;
     justify-content: flex-end;
@@ -57,4 +54,10 @@
 
 .precio {
     text-align: right;
+}
+@media only screen and (max-width: 600px) {
+.featuredContainer{
+        font-size: 13.1px;
+        width:100% !important;
+    }
 }

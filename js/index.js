@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let desc = data[i].desc;
       let imgUrl = data[i].imgUrl;
       let newCard = `
-      <div class="column is-one-quarter">
+      <div class="column  is-multiline">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -54,36 +54,33 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4 is-size-4-mobile">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile;" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
-                  <span>$</span>
-                  <span>${price}</span>
-                  </p>
+                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="content">
+        <div class="content is-hidden-mobile">
           <p>${desc}</p>
-          <br>
-          <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
+        <br>
+        <br>
+        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
       </div>
     </div>
     </div>`
     productsColumn.innerHTML = productsColumn.innerHTML + newCard;
     
     if(data[i].featured) {
-      let featuredItem = `<div class="column is-one-quarter">
+      let featuredItem = `<div class="column ">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -94,17 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4 is-size-4-mobile">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
-                  <span>$</span>
-                  <span>${price}</span>
-                  </p>
+                  <p class="subtitle is-6  is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
@@ -113,10 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         <div class="content">
           <p>${desc}</p>
-          <br>
-          <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
+        <br>
+        <br>
+        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
       </div>
     </div>
     </div>`
@@ -150,7 +144,7 @@ function fetchCategories() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-one-quarter">
+      <div class="column is-multiline">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -161,28 +155,27 @@ function fetchCategories() {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4  is-size-4-mobile ">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
-                  <span>$</span>
-                  <span>${price}</span></p>
+                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="content">
+        <div class="content is-hidden-mobile">
           <p>${desc}</p>
-          <br>
-          <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
+        <br>
+        <br>
+        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+        
       </div>
     </div>
     </div>`
@@ -197,7 +190,7 @@ function fetchCategories() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-one-quarter">
+      <div class="column is-multiline">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -208,29 +201,27 @@ function fetchCategories() {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4 is-size-4-mobile">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
-                  <span>$</span>
-                  <span>${price}</span></p>
+                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="content">
+        <div class="content is-hidden-mobile">
           <p>${desc}</p>
-          <br>
-          <br>
-          <a class="button  btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
-      </div>
+        <br>
+        <br>
+        <a class="button  btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+        </div>
     </div>
     </div>`
         productsColumn.innerHTML = productsColumn.innerHTML + newCard;
@@ -265,7 +256,7 @@ function fetchPlatform() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-one-quarter">
+      <div class="column is-multiline">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -276,28 +267,26 @@ function fetchPlatform() {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4 is-size-4-mobile">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">$
-                  <span>$</span>
-                  <span>${price}</span></p>
+                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="content">
+        <div class="content is-hidden-mobile">
           <p>${desc}</p>
-          <br>
+        </div>
+        <br>
           <br>
           <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()"><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
-        </div>
       </div>
     </div>
     </div>`
@@ -311,7 +300,7 @@ function fetchPlatform() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-      <div class="column is-one-quarter">
+      <div class="column is-multiline">
       <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -322,28 +311,26 @@ function fetchPlatform() {
         <div class="media">
           
           <div class="media-content">
-            <p class="title is-4">${name}</p>
+            <p class="title is-4 is-size-4-mobile">${name}</p>
             <div class="row">
               <div class="columns">
                 <div class="column">
-                  <p class="subtitle is-6;" style="font-weight:bold">${platform}</p>
+                  <p class="subtitle is-6 is-size-5-mobile" style="font-weight:bold">${platform}</p>
                 </div>
                 <div class="column">
-                  <p class="subtitle is-6 has-text-right" style="padding-right:2em; font-weight: bold;">
-                  <span>$</span>
-                  <span>${price}</span></p>
+                  <p class="subtitle is-6 is-size-5-mobile has-text-right" style="padding-right:2em; font-weight: bold;">$${price}</p>
                   </div>
               </div>
             </div>
           </div>
         </div>
     
-        <div class="content">
+        <div class="content is-hidden-mobile">
           <p>${desc}</p>
-          <br>
-          <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego();><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
+        <br>
+        <br>
+        <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego();><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
       </div>
     </div>
     </div>`
