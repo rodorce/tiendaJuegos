@@ -150,7 +150,7 @@ function fetchCategories() {
         let desc = data[i].desc;
         let imgUrl = data[i].imgUrl;
         let newCard = `
-        <div class="column is-one-quarter">
+        <div class="column is-one-quarter-desktop">
         <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
