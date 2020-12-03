@@ -34,13 +34,6 @@
     padding-top: 3em;
 }
 
-#cantidad {
-    width: 80px;
-    height: 30px;
-    font-size:20px;
-    text-align: center;
-}
-
 .btnCheckout {
     display: flex;
     justify-content: flex-end;
@@ -51,4 +44,12 @@
 .imageContainer {
     height: 250px;
     float:left;
+}
+
+
+#cantidad {
+    width: 80px;
+    height: 30px;
+    font-size:20px;
+    text-align: center;
 }

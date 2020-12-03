@@ -11,10 +11,10 @@
     <title>Checkout</title>
 </head>
 <body>
-    <section class="hero is-medium"
-    style="background-image: url('./images/carrito.jpg'); background-position: center; background-repeat: no-repeat;background-size:cover;">
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        
+  <section class="hero is-medium"
+  style="background-image: url('./images/carrito.jpg'); background-position: center; background-repeat: no-repeat;background-size:cover;">
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+       
       <div class="navbar-brand">
         <a class="navbar-item" href="./index.html">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
@@ -72,7 +72,7 @@
 
   <section class="checkoutItems section">
     <div class="container featuredContainer">
-      <h3 class="title">Resumen de la orden</h3>
+        <h3 class="title title-size-1">Resumen de la orden</h3>
       <div class="columns is-multiline">
         <div class="column is-half">
             <div class="juego">
@@ -97,15 +97,15 @@
         <div class="paymentContainer">
       <h3 class="title">Información de pago</h3>
       <h3 class="paymentInfo">Nombre</h3>
-      <input type="text" name="" id="">
+      <input class="input is-small is-hover" type="text" name="" id="">
       <h3 class="paymentInfo">Apellidos</h3>
-      <input type="text" name="" id="">
+      <input  class="input is-small is-hover" type="text" name="" id="">
       <h3 class="paymentInfo">Numero de tarjeta</h3>
-      <input type="text" name="" id="">
+      <input  class="input is-small is-hover" type="text" name="" id="">
       <h3 class="paymentInfo">Expiración</h3>
-      <div class="columns is-multiline">
+      <div class="columns is-multiline is-mobile">
         <div class="column is-one-third">
-            <label class="paymentInfo" for="mes">Selecciona un mes:</label>
+            <label class="paymentInfo" for="mes">Selecciona mes:</label>
             <br>
               <select name="mes" id="mes">
                   <option value="volvo">Enero</option>
@@ -123,17 +123,19 @@
               </select>
         </div>
         <div class="column is-one-third">
-          <h3 class="paymentInfo">Selecciona un año</h3>
-          <input type="number" name="" id="">
+          <h3 class="paymentInfo" class="subtitle subtitle-size-1">Selecciona año</h3>
+          <input class="input is-xxsmall is-hover" type="number" name="" id="">
         </div>
         <div class="column is-one-third">
           <h3 class="paymentInfo">CVV</h3>
-          <input type="number" name="" id="">
+          <input class="input is-xxsmall is-hover" type="number" name="" id="">
         </div>
       </div>
         </div>
     </div>
-    <a class="btnPay button is-success is-outlined">Proceder al pago</a>
+</section>
+<section>
+  <a class="btnPay button is-success is-outlined" id="btnCheckout">Proceder al pago</a>
 </section>
 
     

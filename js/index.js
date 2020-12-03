@@ -342,7 +342,7 @@ function fetchPlatform() {
           <p>${desc}</p>
           <br>
           <br>
-          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego()><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
+          <a class="button btnCarrito is-black is-outlined" onclick="agregarJuego();><img src="./assets/icons/shopping_cart.svg" style="width: 20px; height: 20px;margin-left:8px;margin-right:5px;" alt="" class="src">Agregar al carrito</a>
         </div>
       </div>
     </div>
@@ -366,3 +366,25 @@ function agregarJuego() {
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
+function mostrarJuegosNav(){
+  let juegos = document.querySelectorAll('.navbar-item')
+  let plataforma = document.querySelectorAll(".platform-item")
+  let todosJuegos = document.querySelector('#todosJuegos')
+  juegos[1].addEventListener('click', () => {
+    plataforma[1].click();
+    todosJuegos.scrollIntoView()
+  })
+
+  juegos[2].addEventListener('click', () => {
+    plataforma[2].click();
+    todosJuegos.scrollIntoView()
+  })
+  juegos[3].addEventListener('click', () => {
+    plataforma[3].click();
+    todosJuegos.scrollIntoView()
+  })
+  juegos[4].addEventListener('click', () => {
+    plataforma[4].click();
+    todosJuegos.scrollIntoView()
+  })
+}
